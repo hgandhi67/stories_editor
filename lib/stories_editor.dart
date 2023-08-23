@@ -117,7 +117,7 @@ class _StoriesEditorState extends State<StoriesEditor> {
             onDoneButtonStyle: widget.onDoneButtonStyle,
             onBackPress: widget.onBackPress,
             editorBackgroundColor: widget.editorBackgroundColor,
-            galleryThumbnailQuality: widget.galleryThumbnailQuality,
+            galleryThumbnailQuality: widget.galleryThumbnailQuality!,
           ),
         ),
       ),

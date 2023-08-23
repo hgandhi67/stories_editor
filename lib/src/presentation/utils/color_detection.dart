@@ -51,7 +51,7 @@ class ColorDetection {
   }
 
   void setImageBytes(ByteData imageBytes) {
-    List<int> values = imageBytes.buffer.asUint8List();
+    Uint8List values = imageBytes.buffer.asUint8List();
     photo = null;
     photo = img.decodeImage(values);
   }
