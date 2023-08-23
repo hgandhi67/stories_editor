@@ -32,10 +32,10 @@ class ColorDetection {
     double px = localPosition.dx;
     double py = localPosition.dy;
 
-    int pixel32 = photo!.getPixelSafe(px.toInt(), py.toInt());
-    int hex = abgrToArgb(pixel32);
+    final pixel32 = photo!.getPixelSafe(px.toInt(), py.toInt());
+    final color = photo.getColor(pixel32.x, pixel32.y);
 
-    stateController!.add(Color(hex));
+    stateController!.add(color);
     return Color(hex);
   }
 
