@@ -33,7 +33,7 @@ class ColorDetection {
     double py = localPosition.dy;
 
     final pixel32 = photo!.getPixelSafe(px.toInt(), py.toInt());
-    final color = photo.getPixelInterpolate(pixel32.x, pixel32.y);
+    final color = photo!.getPixelLinear(pixel32.x, pixel32.y);
 
     stateController!.add(color);
     return Color(hex);
